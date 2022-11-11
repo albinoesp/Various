@@ -17,17 +17,20 @@ public class WordInURL {
 
 
     //public static final String THE_URL = "http://www.gutenberg.org/cache/epub/29640/";
-    public static final String THE_URL = "https://es.wikipedia.org/wiki/Wikipedia:Portada";
+    //public final String THE_URL = null;
 
 
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
-        String word;
+        String surl;
+
+        System.out.println("Escriba el URL: " );
+        surl = sc.nextLine();
 
         URL webPage = null;
         try {
-            webPage = new URL(THE_URL);
+            webPage = new URL(surl);
         } catch (MalformedURLException ex) {
             LOG.severe(ex.getMessage());
         }
