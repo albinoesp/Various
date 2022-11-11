@@ -15,17 +15,17 @@ public class WordInURL {
 
     public static final Logger LOG = Logger.getLogger(TAG);
 
-
+    public static final String ANSI_PURPLE = "\u001B[35m";
+    public static final String ANSI_RESET = "\u001B[0m";
     //public static final String THE_URL = "http://www.gutenberg.org/cache/epub/29640/";
     //public final String THE_URL = null;
-
 
 
     public static void main(String[] args) {
         Scanner sc = new Scanner(System.in);
         String surl;
 
-        System.out.println("Escriba el URL: " );
+        System.out.print(ANSI_PURPLE + "Escriba el URL: " + ANSI_RESET);
         surl = sc.nextLine();
 
         URL webPage = null;

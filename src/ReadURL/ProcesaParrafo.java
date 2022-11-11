@@ -40,9 +40,9 @@ public class ProcesaParrafo extends HTMLEditorKit.ParserCallback {
 
             String[] words = texto.split(" ");
 
-            for(String one: words){
+            for (String one : words) {
                 //System.out.println(ANSI_YELLOW + one + ANSI_RESET);
-                if (one.equals(word)){
+                if (one.equals(word)) {
                     //System.out.println(ANSI_PURPLE + one + ANSI_RESET);
                     //System.out.println();
                     pos = pos + 1;
@@ -92,9 +92,11 @@ public class ProcesaParrafo extends HTMLEditorKit.ParserCallback {
             contador++;
         }
         if (t == HTML.Tag.BODY) {
-            System.out.print("\nTotal de párrafos em documento: " + ANSI_YELLOW + contador + ANSI_RESET);
-            System.out.print("\nLa palabra " + ANSI_YELLOW + word + ANSI_RESET + " tiene un total de " + ANSI_YELLOW + contadorword + ANSI_RESET + " ocurrencias" + ANSI_RESET);
-            System.out.print("\nEn las posiciones " + ANSI_YELLOW + arraypos + ANSI_RESET);
+            System.out.print(ANSI_PURPLE + "\nTotal de párrafos en documento: " + ANSI_YELLOW + contador + ANSI_RESET);
+            System.out.print(ANSI_PURPLE + "\nLa palabra " + ANSI_YELLOW + word + ANSI_PURPLE
+                    + " tiene un total de " + ANSI_YELLOW + contadorword + ANSI_PURPLE
+                    + " ocurrencias" + ANSI_RESET);
+            System.out.print(ANSI_PURPLE + "\nen las posiciones " + ANSI_YELLOW + arraypos + ANSI_RESET);
             /*for (Integer arr : arraypos){
                 System.out.print("En la posición " + arr + ", ");
             }*/
